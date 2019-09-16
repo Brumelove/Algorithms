@@ -5,7 +5,9 @@ public class Mcb {
 
     public static void main(String[] args) {
         isComparable("11", "11", "11");
-        reverse("love");
+
+
+        reverse("tunde");
 
 //        String word = "invigilation";
 //        LinkedHashSet<Character> values = new LinkedHashSet<>();
@@ -103,12 +105,17 @@ public class Mcb {
     }
 
     static String reverse(String value) {
-        for (int i = value.length() - 1; i <= 0 ; i--) {
-            System.out.println(i);
-            value = "" + value.substring(i,0);
-            System.out.println(value);
+        String r = "";
+        for (int i = value.length() - 1; i >= 0; i--) {
+            r = r + value.charAt(i);
         }
-        return value;
+        if (value.equalsIgnoreCase(r)) {
+            System.out.println("palindrome");
+        } else {
+            System.out.println("not palindrome");
+        }
+        return r;
+
     }
 
 
